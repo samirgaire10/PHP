@@ -19,14 +19,20 @@
 
 
 
-
+<center>
             <h1>Note Taking App</h1>
             <form action="save_note.php" method="post">
                 <label for="note">Enter your note:</label><br>
-                <textarea id="note" name="note" rows="4" cols="50" required></textarea><br>
+                <textarea id="note" name="note" rows="10" cols="100" required></textarea><br>
                 <button type="submit">Save Note</button>
             </form>
+
+
+
             <h2>Saved Notes</h2>
+
+</center>
+
             <?php
             if (file_exists("notes.txt")) {
                 $notes = file("notes.txt", FILE_IGNORE_NEW_LINES);

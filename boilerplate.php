@@ -14,9 +14,7 @@
 
         <h1>Simple Gallery App</h1>
 
-
-
-        
+    
 
         </main>
 
