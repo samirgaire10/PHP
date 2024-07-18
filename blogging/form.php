@@ -1,3 +1,14 @@
+<?php
+// Define the file path
+$filePath = 'user_data.json';
+
+// Check if user_data.json exists
+if (file_exists($filePath)) {
+    header("Location: blog.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My blog
-    </title>
+    <title>Blog</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -13,8 +12,7 @@
     <div class="wrapper">
         <main class="content">
 
-        <h1>Welcome To my Blog</h1>
-        
+        <h1>Blog</h1>
 
     
 
