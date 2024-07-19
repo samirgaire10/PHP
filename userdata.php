@@ -4,7 +4,7 @@ $filePath = 'user_data.json';
 
 // Check if user_data.json exists
 if (file_exists($filePath)) {
-    header("Location: blog.php");
+    header("Location: ../index.php");
     exit();
 }
 
@@ -14,8 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $age = $_POST['age'];
     $sex = $_POST['sex'];
     $email = $_POST['email'];
-    $favorites = $_POST['favorites'];
     $privacy_policy = isset($_POST['privacy_policy']) ? true : false;
+    $twitter = isset($_POST['twitter']) ? $_POST['twitter'] : " ";
+    $github = isset($_POST['github']) ? $_POST['github'] : " ";
+    $favorites = isset($_POST['favorites']) ? $_POST['favorites'] : " ";
 
     // Create an associative array with the data
     $userData = array(
@@ -24,6 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'sex' => $sex,
         'email' => $email,
         'favorites' => $favorites,
+        'twitter' => $twitter,
+        'github' => $github,
         'privacy_policy' => $privacy_policy
     );
 
@@ -48,6 +52,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Data Submitted</title>
+    <link rel="stylesheet" href="../style.css">
+
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -98,14 +104,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+<nav id="desktop-nav">
+        <div class="logo">
+            <a href="https://samirgaire10.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">ガイレ サミル</a>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Github</a></li>
+                <li><a href="userdata.php">
+                <?php
+                $username = 'Guest User';
+                $filePath = './user/user_data.json';
+
+                if (file_exists($filePath)) {
+                    $jsonData = file_get_contents($filePath);
+                    $data = json_decode($jsonData, true);
+                    
+                    if (isset($data['username'])) {
+                        $username = $data['username'];
+                    }
+                }
+
+                echo "<p>Welcome, $username!</p>";
+            ?>
+
+
+                </a></li>
+                <!-- <li><a href="#projects">Projects</a></li> 
+                <li><a href="./lg/jp.html">Japanese</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+    
     <div class="container result">
-        <h2>Hello, <?php echo htmlspecialchars($username); ?></h2>
-        <p><strong>Username:</strong> <?php echo htmlspecialchars($username); ?></p>
+    <p><strong>Hello :</strong> <?php echo htmlspecialchars($username); ?></p>
+    <p><strong>Username:</strong> <?php echo htmlspecialchars($username); ?></p>
         <p><strong>Age:</strong> <?php echo htmlspecialchars($age); ?></p>
         <p><strong>Sex:</strong> <?php echo htmlspecialchars($sex); ?></p>
         <p><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></p>
+        <p><strong>Github:</strong> <?php echo htmlspecialchars($github); ?></p>
+        <p><strong>Twitter:</strong> <?php echo htmlspecialchars($twitter); ?></p>
         <p><strong>Favorite Things:</strong> <?php echo htmlspecialchars($favorites); ?></p>
-        <a href="./blog.php" class="button">Save and Go</a>
+        <a href="../index.php" class="button">Save and Go</a>
     </div>
 </body>
 

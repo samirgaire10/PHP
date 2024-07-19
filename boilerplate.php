@@ -21,7 +21,7 @@
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-links">
-                    <a href="../index.html">Home</a>
+                    <a href="../index.php">Home</a>
                     <a href="https://github.com/samirgaire10/">Github</a>
                     <a href="https://samirgaire10.github.io/Portfolio/">Portfolio</a>
                 </div>

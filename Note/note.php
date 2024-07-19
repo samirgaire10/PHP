@@ -41,6 +41,39 @@
 
 <body>
 
+<nav id="desktop-nav">
+        <div class="logo">
+            <a href="https://samirgaire10.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">ガイレ サミル</a>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Github</a></li>
+                <li><a href="user/userdata.php">
+                <?php
+                $username = 'Guest User';
+                $filePath = './user/user_data.json';
+
+                if (file_exists($filePath)) {
+                    $jsonData = file_get_contents($filePath);
+                    $data = json_decode($jsonData, true);
+                    
+                    if (isset($data['username'])) {
+                        $username = $data['username'];
+                    }
+                }
+
+                echo "<p>Welcome, $username!</p>";
+            ?>
+
+
+                </a></li>
+                <!-- <li><a href="#projects">Projects</a></li> 
+                <li><a href="./lg/jp.html">Japanese</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
 <div class="wrapper">
         <main class="content">
             <center>
@@ -78,7 +111,7 @@
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-links">
-                    <a href="../index.html">Home</a>
+                    <a href="../index.php">Home</a>
                     <a href="https://github.com/samirgaire10/">Github</a>
                     <a href="https://samirgaire10.github.io/Portfolio/">Portfolio</a>
                 </div>
