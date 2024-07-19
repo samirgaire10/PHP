@@ -147,7 +147,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Github:</strong> <?php echo htmlspecialchars($github); ?></p>
         <p><strong>Twitter:</strong> <?php echo htmlspecialchars($twitter); ?></p>
         <p><strong>Favorite Things:</strong> <?php echo htmlspecialchars($favorites); ?></p>
-        <a href="../index.php" class="button">Save and Go</a>
+        <a href="../index.php" class="button">Done</a>
     </div>
 </body>
 
