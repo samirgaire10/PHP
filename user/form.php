@@ -4,10 +4,13 @@ $filePath = 'user_data.json';
 
 // Check if user_data.json exists
 if (file_exists($filePath)) {
-    header("Location: ../index.php");
+    header("Location: show_user_data.php");
     exit();
 }
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +64,7 @@ if (file_exists($filePath)) {
 
     <div class="container">
         <h1>User Data Form</h1>
-        <form action="userdata.php" method="POST">
+        <form action="save_user_data.php" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
