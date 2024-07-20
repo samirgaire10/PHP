@@ -87,6 +87,7 @@
 
                 <h2>Saved Notes</h2>
             </center>
+            
             <?php
             $delimiter = "---END OF NOTE---";
             $files = glob("*.txt");

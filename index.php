@@ -69,6 +69,14 @@
                         <p>My Blogging</p>
                     </a>
                 </div>
+
+                <div class="project">
+                    <a href="SNS/Connect.php">
+                        <img src="icons/sns.png" alt="SNS">
+                        <p>SNS</p>
+                    </a>
+                </div>
+
                 <div class="project">
                     <a href="./user/form.php">
                         <img src="./icons/profile.png" alt="User Registration Icon">
