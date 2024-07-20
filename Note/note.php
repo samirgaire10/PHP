@@ -9,14 +9,15 @@
 
 
     <style>
-     .note {
+        .note {
             border: 1px solid #ccc;
             padding: 10px;
             margin: 10px;
             border-radius: 5px;
             background-color: #f9f9f9;
             position: relative;
-            white-space: pre-wrap; /* Preserve new lines */
+            white-space: pre-wrap;
+            /* Preserve new lines */
         }
 
         .note p {
@@ -41,7 +42,7 @@
 
 <body>
 
-<nav id="desktop-nav">
+    <nav id="desktop-nav">
         <div class="logo">
             <a href="https://samirgaire10.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">ガイレ サミル</a>
         </div>
@@ -50,31 +51,31 @@
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Github</a></li>
                 <li><a href="user/userdata.php">
-                <?php
-                $username = 'Guest User';
-                $filePath = './user/user_data.json';
+                        <?php
+                        $username = 'Guest User';
+                        $filePath = './user/user_data.json';
 
-                if (file_exists($filePath)) {
-                    $jsonData = file_get_contents($filePath);
-                    $data = json_decode($jsonData, true);
-                    
-                    if (isset($data['username'])) {
-                        $username = $data['username'];
-                    }
-                }
+                        if (file_exists($filePath)) {
+                            $jsonData = file_get_contents($filePath);
+                            $data = json_decode($jsonData, true);
 
-                echo "<p>Welcome, $username!</p>";
-            ?>
+                            if (isset($data['username'])) {
+                                $username = $data['username'];
+                            }
+                        }
+
+                        echo "<p>Welcome, $username!</p>";
+                        ?>
 
 
-                </a></li>
+                    </a></li>
                 <!-- <li><a href="#projects">Projects</a></li> 
                 <li><a href="./lg/jp.html">Japanese</a></li> -->
             </ul>
         </div>
     </nav>
 
-<div class="wrapper">
+    <div class="wrapper">
         <main class="content">
             <center>
                 <h1>Note Taking App</h1>
@@ -120,7 +121,7 @@
         </footer>
     </div>
 
-    
+
 </body>
 
 </html>
