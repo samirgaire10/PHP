@@ -37,8 +37,7 @@
 
 
                     </a></li>
-                <!-- <li><a href="#projects">Projects</a></li> 
-                <li><a href="./lg/jp.html">Japanese</a></li> -->
+               
             </ul>
         </div>
     </nav>
@@ -46,7 +45,7 @@
     <div class="wrapper">
         <main class="content">
 
-            <h1> <?php  echo "<p>Welcome to, $username `s   Blog</p>"; ?> </h1>
+            <h1> <?php  echo "<p>Welcome to, $username `s   SNS Page</p>"; ?> </h1>
 
 
 

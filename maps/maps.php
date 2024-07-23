@@ -58,8 +58,8 @@
 
     <script>
         // Initialize the map
-        // var map = L.map('map').setView([36.2048, 138.2529], 5); // Centered on Japan
-        var map = L.map('map').setView([20, -10], 2);
+        var map = L.map('map').setView([36.2048, 138.2529], 5); // Centered on Japan
+        // var map = L.map('map').setView([20, -10], 2);
 
 
 

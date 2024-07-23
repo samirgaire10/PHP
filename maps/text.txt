@@ -1,0 +1,2 @@
+Create a website to gather and display real-time emergency data, such as earthquakes and landslides, from satellites, government emergency sites, and the Red Cross. An interactive map will present this data for easy access and awareness.
+
